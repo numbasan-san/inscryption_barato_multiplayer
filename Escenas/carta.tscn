@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://btcrnuq3i77f5"]
+
+[ext_resource type="Texture2D" uid="uid://h8qh2qennohq" path="res://Assets/cartas/frente/2d/pixel_card_empty_rare.png" id="1_86krb"]
+[ext_resource type="Texture2D" uid="uid://dxc8udppx4jiq" path="res://Assets/cartas/costes/2d/pixel_card_costs_1.png" id="2_bfah6"]
+[ext_resource type="Texture2D" uid="uid://bw21mbhxbsw0n" path="res://Assets/cartas/sellos/2d/pixelability_tristrike.png" id="3_5g7pj"]
+[ext_resource type="Texture2D" uid="uid://dixx7far0idnp" path="res://Assets/cartas/sellos/2d/pixelability_drawcopyondeath.png" id="4_1ce4i"]
+[ext_resource type="Texture2D" uid="uid://c1ttqnhrg5ayw" path="res://Assets/cartas/impresiones/2d/leshy/pixelportrait_urayuli.png" id="5_mrm6v"]
+[ext_resource type="Texture2D" uid="uid://m0kstc5i1mjq" path="res://Assets/cartas/frente/2d/pixel_rare_frame_nature.png" id="6_sovhx"]
+[ext_resource type="Texture2D" uid="uid://bx3kme4w82jtn" path="res://Assets/tablero/daño/pixel_stroke_numbers_18.png" id="7_dydgd"]
+
+[node name="card_body" type="Sprite2D"]
+texture = ExtResource("1_86krb")
+
+[node name="card_seal" type="Sprite2D" parent="."]
+position = Vector2(-9, 13)
+texture = ExtResource("3_5g7pj")
+
+[node name="card_seal2" type="Sprite2D" parent="."]
+position = Vector2(9, 13)
+texture = ExtResource("4_1ce4i")
+
+[node name="card_portrait" type="Sprite2D" parent="."]
+position = Vector2(-0.5, -13)
+texture = ExtResource("5_mrm6v")
+
+[node name="card_ornament" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
+texture = ExtResource("6_sovhx")
+
+[node name="card_cost" type="Sprite2D" parent="."]
+position = Vector2(8, -20.5)
+texture = ExtResource("2_bfah6")
+
+[node name="card_damage" type="Sprite2D" parent="."]
+position = Vector2(-16.5, 23)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_dydgd")
+
+[node name="card_health" type="Sprite2D" parent="."]
+position = Vector2(16.5, 23)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_dydgd")
