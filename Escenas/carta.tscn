@@ -1,23 +1,30 @@
 [gd_scene load_steps=8 format=3 uid="uid://btcrnuq3i77f5"]
 
-[ext_resource type="Texture2D" uid="uid://h8qh2qennohq" path="res://Assets/cartas/frente/2d/pixel_card_empty_rare.png" id="1_86krb"]
-[ext_resource type="Texture2D" uid="uid://dxc8udppx4jiq" path="res://Assets/cartas/costes/2d/pixel_card_costs_1.png" id="2_bfah6"]
-[ext_resource type="Texture2D" uid="uid://bw21mbhxbsw0n" path="res://Assets/cartas/sellos/2d/pixelability_tristrike.png" id="3_5g7pj"]
-[ext_resource type="Texture2D" uid="uid://dixx7far0idnp" path="res://Assets/cartas/sellos/2d/pixelability_drawcopyondeath.png" id="4_1ce4i"]
-[ext_resource type="Texture2D" uid="uid://c1ttqnhrg5ayw" path="res://Assets/cartas/impresiones/2d/leshy/pixelportrait_urayuli.png" id="5_mrm6v"]
-[ext_resource type="Texture2D" uid="uid://m0kstc5i1mjq" path="res://Assets/cartas/frente/2d/pixel_rare_frame_nature.png" id="6_sovhx"]
-[ext_resource type="Texture2D" uid="uid://bx3kme4w82jtn" path="res://Assets/tablero/daño/pixel_stroke_numbers_18.png" id="7_dydgd"]
+[ext_resource type="Texture2D" uid="uid://h8qh2qennohq" path="res://Assets/cartas/base/2d/pixel_card_empty_rare.png" id="1_yc6hq"]
+[ext_resource type="Texture2D" uid="uid://bw21mbhxbsw0n" path="res://Assets/cartas/sello/2d/pixelability_tristrike.png" id="2_j2mba"]
+[ext_resource type="Texture2D" uid="uid://dmanlicsb0tk6" path="res://Assets/cartas/sello/2d/pixelability_deathtouch.png" id="3_ohitq"]
+[ext_resource type="Texture2D" uid="uid://c1ttqnhrg5ayw" path="res://Assets/cartas/retrato/2d/sacrificio/pixelportrait_urayuli.png" id="5_mrm6v"]
+[ext_resource type="Texture2D" uid="uid://m0kstc5i1mjq" path="res://Assets/cartas/base/2d/pixel_rare_frame_nature.png" id="5_rxixs"]
+[ext_resource type="Texture2D" uid="uid://bp8hjslib2i0h" path="res://Assets/cartas/coste/2d/hueso/pixel_card_costs_1.png" id="6_3fimf"]
+[ext_resource type="FontFile" uid="uid://bsl2hepk3jdet" path="res://Assets/Font/Marksman.ttf" id="8_jm7bs"]
 
-[node name="card_body" type="Sprite2D"]
-texture = ExtResource("1_86krb")
+[node name="card" type="Sprite2D"]
+texture = ExtResource("1_yc6hq")
+
+[node name="card_body" type="Sprite2D" parent="."]
+position = Vector2(-9, 12)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("2_j2mba")
 
 [node name="card_seal" type="Sprite2D" parent="."]
-position = Vector2(-9, 13)
-texture = ExtResource("3_5g7pj")
+position = Vector2(-9, 12)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("2_j2mba")
 
 [node name="card_seal2" type="Sprite2D" parent="."]
-position = Vector2(9, 13)
-texture = ExtResource("4_1ce4i")
+position = Vector2(9, 12)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("3_ohitq")
 
 [node name="card_portrait" type="Sprite2D" parent="."]
 position = Vector2(-0.5, -13)
@@ -25,18 +32,59 @@ texture = ExtResource("5_mrm6v")
 
 [node name="card_ornament" type="Sprite2D" parent="."]
 position = Vector2(0, -12)
-texture = ExtResource("6_sovhx")
+texture = ExtResource("5_rxixs")
 
 [node name="card_cost" type="Sprite2D" parent="."]
 position = Vector2(8, -20.5)
-texture = ExtResource("2_bfah6")
+texture = ExtResource("6_3fimf")
 
-[node name="card_damage" type="Sprite2D" parent="."]
-position = Vector2(-16.5, 23)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("7_dydgd")
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -40.0
+offset_right = -1.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
 
-[node name="card_health" type="Sprite2D" parent="."]
-position = Vector2(16.5, 23)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("7_dydgd")
+[node name="damage" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_jm7bs")
+theme_override_font_sizes/font_size = 16
+text = "7"
+
+[node name="health" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -8.0
+offset_right = -1.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_jm7bs")
+theme_override_font_sizes/font_size = 16
+text = "7"

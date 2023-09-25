@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsfop6qv21nda"]
+
+[ext_resource type="Script" path="res://Script/game.gd" id="1_xc70m"]
+[ext_resource type="Texture2D" uid="uid://dw1ygrkc7ak80" path="res://Assets/tablero/piezas/2d/gbc_board_nature.png" id="2_m2jhk"]
+[ext_resource type="PackedScene" uid="uid://btcrnuq3i77f5" path="res://Escenas/carta.tscn" id="3_jb5sn"]
+
+[node name="game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xc70m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="GbcBoardNature" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_m2jhk")
+
+[node name="grid" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.312
+anchor_top = 0.463
+anchor_right = 0.68
+anchor_bottom = 0.654
+offset_left = -0.424011
+offset_top = -0.0240173
+offset_right = -0.359985
+offset_bottom = 0.207977
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="card_body" parent="grid" instance=ExtResource("3_jb5sn")]
+visible = false
+z_index = 10
+position = Vector2(45, 52)
+scale = Vector2(2.102, 2)

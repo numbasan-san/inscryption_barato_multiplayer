@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://7qrcpac1slcp"]
+
+[ext_resource type="Script" path="res://Script/game_card.gd" id="1_m6td6"]
+[ext_resource type="Texture2D" uid="uid://dw1ygrkc7ak80" path="res://Assets/tablero/piezas/2d/gbc_board_nature.png" id="1_olhwg"]
+[ext_resource type="PackedScene" uid="uid://be10wy2bywpp1" path="res://Escenas/card.tscn" id="2_17yj1"]
+[ext_resource type="Texture2D" uid="uid://bj6kkx6hxh6k8" path="res://Assets/cartas/retrato/2d/hueso/pixelportrait_banshee.png" id="4_37mcm"]
+[ext_resource type="Texture2D" uid="uid://3om5rpkvju0c" path="res://Assets/cartas/base/2d/pixel_card_empty_normal.png" id="4_vgw6f"]
+[ext_resource type="Texture2D" uid="uid://bp8hjslib2i0h" path="res://Assets/cartas/coste/2d/hueso/pixel_card_costs_1.png" id="5_y8s52"]
+[ext_resource type="PackedScene" uid="uid://bcqkstehko6jv" path="res://Escenas/info_card.tscn" id="7_2tciw"]
+
+[node name="table" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m6td6")
+
+[node name="GbcBoardNature" type="Sprite2D" parent="."]
+position = Vector2(582, 343)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_olhwg")
+
+[node name="player_hand" type="Node" parent="."]
+
+[node name="player_board" type="Node" parent="."]
+
+[node name="card" parent="player_board" instance=ExtResource("2_17yj1")]
+offset_left = 369.0
+offset_top = 321.0
+offset_right = 414.0
+offset_bottom = 381.0
+size_flags_stretch_ratio = 20.0
+
+[node name="body" parent="player_board/card" index="0"]
+texture = ExtResource("4_vgw6f")
+
+[node name="portrait" parent="player_board/card" index="1"]
+texture = ExtResource("4_37mcm")
+
+[node name="ornament" parent="player_board/card" index="2"]
+visible = false
+
+[node name="cost" parent="player_board/card" index="3"]
+texture = ExtResource("5_y8s52")
+
+[node name="healt" parent="player_board/card" index="4"]
+text = "1"
+
+[node name="damage" parent="player_board/card" index="5"]
+text = "1"
+
+[node name="card2" parent="player_board" instance=ExtResource("2_17yj1")]
+offset_left = 477.0
+offset_top = 321.0
+offset_right = 522.0
+offset_bottom = 381.0
+size_flags_stretch_ratio = 20.0
+
+[node name="card3" parent="player_board" instance=ExtResource("2_17yj1")]
+offset_left = 588.0
+offset_top = 321.0
+offset_right = 633.0
+offset_bottom = 381.0
+size_flags_stretch_ratio = 20.0
+
+[node name="card4" parent="player_board" instance=ExtResource("2_17yj1")]
+offset_left = 695.0
+offset_top = 321.0
+offset_right = 740.0
+offset_bottom = 381.0
+size_flags_stretch_ratio = 20.0
+
+[node name="rival_hand" type="Node" parent="."]
+
+[node name="rival_board" type="Node" parent="."]
+
+[node name="card" parent="rival_board" instance=ExtResource("2_17yj1")]
+offset_left = 372.0
+offset_top = 163.0
+offset_right = 417.0
+offset_bottom = 223.0
+size_flags_stretch_ratio = 20.0
+
+[node name="card2" parent="rival_board" instance=ExtResource("2_17yj1")]
+offset_left = 477.0
+offset_top = 163.0
+offset_right = 522.0
+offset_bottom = 223.0
+size_flags_stretch_ratio = 20.0
+
+[node name="card3" parent="rival_board" instance=ExtResource("2_17yj1")]
+offset_left = 588.0
+offset_top = 163.0
+offset_right = 633.0
+offset_bottom = 223.0
+size_flags_stretch_ratio = 20.0
+
+[node name="card4" parent="rival_board" instance=ExtResource("2_17yj1")]
+offset_left = 693.0
+offset_top = 163.0
+offset_right = 738.0
+offset_bottom = 223.0
+size_flags_stretch_ratio = 20.0
+
+[node name="info_card" parent="." instance=ExtResource("7_2tciw")]
+offset_left = 824.0
+offset_top = 101.0
+offset_right = 824.0
+offset_bottom = 101.0
+scale = Vector2(2.1, 2.1)
+
+[editable path="player_board/card"]
+[editable path="player_board/card2"]
+[editable path="player_board/card3"]
+[editable path="player_board/card4"]
+[editable path="rival_board/card"]
+[editable path="rival_board/card2"]
+[editable path="rival_board/card3"]
+[editable path="rival_board/card4"]
+[editable path="info_card"]

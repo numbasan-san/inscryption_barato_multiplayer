@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="card" load_steps=7 format=3 uid="uid://cs0qkcl5c7dm8"]
+
+[ext_resource type="Texture2D" uid="uid://h8qh2qennohq" path="res://Assets/cartas/base/2d/pixel_card_empty_rare.png" id="1_nn5ux"]
+[ext_resource type="Texture2D" uid="uid://ymwlx52b6kqh" path="res://Assets/cartas/coste/2d/sacrificio/pixel_card_costs_1.png" id="2_dsrb2"]
+[ext_resource type="Texture2D" uid="uid://m0kstc5i1mjq" path="res://Assets/cartas/base/2d/pixel_rare_frame_nature.png" id="2_hpdc2"]
+[ext_resource type="Texture2D" uid="uid://bi5tqht3bktad" path="res://Assets/cartas/retrato/2d/sacrificio/pixelportrait_mantisgod.png" id="3_8y4oa"]
+[ext_resource type="Script" path="res://Script/card.gd" id="4_yklob"]
+[ext_resource type="Texture2D" uid="uid://bw21mbhxbsw0n" path="res://Assets/cartas/sello/2d/pixelability_tristrike.png" id="5_b01w1"]
+
+[resource]
+script = ExtResource("4_yklob")
+base_card = ExtResource("1_nn5ux")
+ornament = ExtResource("2_hpdc2")
+retrato = ExtResource("3_8y4oa")
+tipo_coste = "sacrificio"
+coste = ExtResource("2_dsrb2")
+int_coste = 1
+nombre = "Dios Mantis"
+description = "Ataca a tres carriles a la vez"
+sello1 = ExtResource("5_b01w1")
+damage = 3
+salud = 1
+sacrificable = false

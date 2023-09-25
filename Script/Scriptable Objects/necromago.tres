@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="card" load_steps=7 format=3 uid="uid://c6qmyfvotpdty"]
+
+[ext_resource type="Texture2D" uid="uid://h8qh2qennohq" path="res://Assets/cartas/base/2d/pixel_card_empty_rare.png" id="1_qtf3e"]
+[ext_resource type="Texture2D" uid="uid://eay0uvptv2q4" path="res://Assets/cartas/coste/2d/hueso/pixel_card_costs_3.png" id="2_urdmd"]
+[ext_resource type="Texture2D" uid="uid://dh4i72dwyj1aq" path="res://Assets/cartas/base/2d/pixel_rare_frame_undead.png" id="2_vewo5"]
+[ext_resource type="Texture2D" uid="uid://cnlp0f6iab84i" path="res://Assets/cartas/retrato/2d/hueso/pixelportrait_necromancer.png" id="3_gn5nq"]
+[ext_resource type="Script" path="res://Script/card.gd" id="4_qg5qx"]
+[ext_resource type="Texture2D" uid="uid://cif7lr07dpuol" path="res://Assets/cartas/sello/2d/pixelability_doubledeath.png" id="5_njsg1"]
+
+[resource]
+script = ExtResource("4_qg5qx")
+base_card = ExtResource("1_qtf3e")
+ornament = ExtResource("2_vewo5")
+retrato = ExtResource("3_gn5nq")
+tipo_coste = "hueso"
+coste = ExtResource("2_urdmd")
+int_coste = 3
+nombre = "Nrecomago"
+description = "Recusita las cartas muertas pero mueren al instante."
+sello1 = ExtResource("5_njsg1")
+damage = 1
+salud = 2
+sacrificable = true

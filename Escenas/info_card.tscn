@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcqkstehko6jv"]
+
+[ext_resource type="Theme" uid="uid://7ldweup2pm5u" path="res://Theme/interfaz.tres" id="1_cei6p"]
+[ext_resource type="Texture2D" uid="uid://dhgwis0ltrbe6" path="res://Assets/tablero/piezas/2d/gbc_cardinfo.png" id="2_sixtq"]
+[ext_resource type="Texture2D" uid="uid://bp8hjslib2i0h" path="res://Assets/cartas/coste/2d/hueso/pixel_card_costs_1.png" id="3_yjall"]
+
+[node name="info_card" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_cei6p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_sixtq")
+
+[node name="cost" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 4.0
+offset_right = 102.0
+offset_bottom = 17.0
+texture = ExtResource("3_yjall")
+
+[node name="name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 44.0
+offset_bottom = 16.0
+text = "Prueba"
+vertical_alignment = 1
+
+[node name="description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 19.0
+offset_right = 102.0
+offset_bottom = 150.0
+text = "Esta carta es baneada del juego por los convenios de Ginebra."
+autowrap_mode = 3
+
+[node name="health" type="Label" parent="."]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 148.0
+offset_right = 104.0
+offset_bottom = 161.0
+text = "7
+"
+horizontal_alignment = 2
+
+[node name="damage" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 148.0
+offset_right = 8.0
+offset_bottom = 161.0
+text = "7"
