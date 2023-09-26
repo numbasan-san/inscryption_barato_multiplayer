@@ -12,8 +12,8 @@ extends Control
 #@onready var rival_description = $card_info/description # nombre de la carta
 @onready var rival_sello1 = $rival_board/card/seals/seal # habilidad
 @onready var rival_sello2 = $rival_board/card/seals/seal2 # habilidad
-@onready var rival_damage = $rival_board/card/healt
-@onready var rival_salud = $rival_board/card/damage
+@onready var rival_damage = $rival_board/card/damage
+@onready var rival_salud = $rival_board/card/healt
 
 # player's card
 @onready var player_base_card = $player_board/card/body # diseño de la carta
@@ -25,8 +25,8 @@ extends Control
 #@onready var player_description = $card_info/description 
 @onready var player_sello1 = $player_board/card/seals/seal # habilidad
 @onready var player_sello2 = $player_board/card/seals/seal2 # habilidad
-@onready var player_damage = $player_board/card/healt
-@onready var player_salud = $player_board/card/damage
+@onready var player_damage = $player_board/card/damage
+@onready var player_salud = $player_board/card/healt
 
 # info card
 @onready var info_cost = $info_card/cost # diseño de la carta
